@@ -1,5 +1,5 @@
 import list1 from '../stub/services/list-1.json'
-import {map} from 'lodash'
+import { map } from 'lodash'
 
 export class ProductItem {
     constructor (item) {
@@ -44,11 +44,16 @@ class Meat extends ProductItem {
 
 const items = map(list1, item => {
     switch (item.title) {
-    case 'Мясо': return new Meat(item)
-    case 'Яйца': return new Eggs(item)
-    case 'Молоко': return new Milk(item)
-    case 'Хлеб': return new Bread(item)
-    case 'Пиво': return new Beer(item)
+    case 'Мясо':
+        return new Meat(item)
+    case 'Яйца':
+        return new Eggs(item)
+    case 'Молоко':
+        return new Milk(item)
+    case 'Хлеб':
+        return new Bread(item)
+    case 'Пиво':
+        return new Beer(item)
     }
 })
 console.log(items)
