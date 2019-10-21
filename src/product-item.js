@@ -30,16 +30,16 @@ class Milk extends ProductItem {
   drink = () => console.log('Пью Молоко');
 }
 class Eggs extends ProductItem {
-  fry = () => {};
+  fry = () => console.log('Жарю яйца');
 }
 class Bread extends ProductItem {
-  cut = () => {};
+  cut = () => console.log('Режу хлеб');
 }
 class Beer extends ProductItem {
-  drink = () => {};
+  drink = () => console.log('Пью пефко');
 }
 class Meat extends ProductItem {
-  fry = () => {};
+  fry = () => console.log('Жарю мясо');
 }
 
 const items = map(list1, item => {
@@ -51,3 +51,4 @@ const items = map(list1, item => {
     case 'Пиво': return new Beer(item)
     }
 })
+console.log(items)
